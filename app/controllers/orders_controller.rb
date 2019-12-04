@@ -12,8 +12,10 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
-    @vendor = Vendor.find(params[:vendor_id])
-    @order = @vendor.orders.find(params[:id])
+    #@vendor = Vendor.find(params[:vendor_id])
+    #@order = @vendor.orders.find(params[:id])
+    @order = Order.find(params[:id])
+
   end
 
   # GET /orders/new

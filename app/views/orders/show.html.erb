@@ -30,5 +30,7 @@
   <%= @order.vendor_id %>
 </p>
 
+<% if false %>
 <%= link_to 'Edit', edit_vendor_order_path(@vendor, @order) %> |
 <%= link_to 'Back', vendor_orders_path(@vendor) %>
+<% end %>

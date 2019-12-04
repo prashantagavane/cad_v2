@@ -35,13 +35,16 @@
         <td><%= vendor.balance_payment %></td>
         <td><%= vendor.actual_payment %></td>
         <td><%= link_to 'Show', vendor %></td>
+        <% if current_user.admin? %>
         <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
         <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+        <% if current_user.admin? %>
 <%= link_to 'New Vendor', new_vendor_path %>
+        <% end %>

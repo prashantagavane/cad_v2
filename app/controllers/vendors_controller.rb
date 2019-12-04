@@ -1,6 +1,15 @@
 class VendorsController < ApplicationController
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:edit, :destroy, :new]
 
+
+#admin_authorization
+  def ensure_admin
+    unless current_user && current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
   # GET /vendors
   # GET /vendors.json
   def index
