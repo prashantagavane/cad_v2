@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @order.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @order.destination %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @order.plan %>
+</p>
+
+<p>
+  <strong>Insurance:</strong>
+  <%= @order.insurance %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @order.vendor_id %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_order_path(@vendor, @order) %> |
+<%= link_to 'Back', vendor_orders_path(@vendor) %>

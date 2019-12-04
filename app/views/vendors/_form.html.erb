@@ -1,0 +1,72 @@
+<%= form_with(model: vendor, local: true) do |form| %>
+  <% if vendor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vendor.errors.count, "error") %> prohibited this vendor from being saved:</h2>
+
+      <ul>
+        <% vendor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release %>
+    <%= form.text_field :release %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivered_orders %>
+    <%= form.number_field :delivered_orders %>
+  </div>
+
+  <div class="field">
+    <%= form.label :failed_orders %>
+    <%= form.number_field :failed_orders %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deal %>
+    <%= form.number_field :deal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discount %>
+    <%= form.number_field :discount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sla %>
+    <%= form.number_field :sla %>
+  </div>
+
+  <div class="field">
+    <%= form.label :penalty %>
+    <%= form.number_field :penalty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :balance_payment %>
+    <%= form.number_field :balance_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actual_payment %>
+    <%= form.number_field :actual_payment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

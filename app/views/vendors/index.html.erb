@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vendors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Release</th>
+      <th>Delivered orders</th>
+      <th>Failed orders</th>
+      <th>Deal</th>
+      <th>Discount</th>
+      <th>Sla</th>
+      <th>Penalty</th>
+      <th>Balance payment</th>
+      <th>Actual payment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.name %></td>
+        <td><%= vendor.email %></td>
+        <td><%= vendor.release %></td>
+        <td><%= vendor.delivered_orders %></td>
+        <td><%= vendor.failed_orders %></td>
+        <td><%= vendor.deal %></td>
+        <td><%= vendor.discount %></td>
+        <td><%= vendor.sla %></td>
+        <td><%= vendor.penalty %></td>
+        <td><%= vendor.balance_payment %></td>
+        <td><%= vendor.actual_payment %></td>
+        <td><%= link_to 'Show', vendor %></td>
+        <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor', new_vendor_path %>

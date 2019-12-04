@@ -1,0 +1,52 @@
+<%= form_for([@vendor, @rate]) do |form| %>
+  <% if @rate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rate.errors.count, "error") %> prohibited this rate from being saved:</h2>
+
+      <ul>
+        <% @rate.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :origin %>
+    <%= form.text_field :origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_field :destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :basic %>
+    <%= form.number_field :basic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :advance %>
+    <%= form.number_field :advance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :premium %>
+    <%= form.number_field :premium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insurance %>
+    <%= form.number_field :insurance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vendor_id %>
+    <%= form.text_field :vendor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

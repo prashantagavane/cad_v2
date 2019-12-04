@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @rate.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @rate.destination %>
+</p>
+
+<p>
+  <strong>Basic:</strong>
+  <%= @rate.basic %>
+</p>
+
+<p>
+  <strong>Advance:</strong>
+  <%= @rate.advance %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @rate.premium %>
+</p>
+
+<p>
+  <strong>Insurance:</strong>
+  <%= @rate.insurance %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @rate.vendor_id %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_rate_path(@vendor, @rate) %> |
+<%= link_to 'Back', vendor_rates_path(@vendor) %>
+

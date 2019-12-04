@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vendor.email %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @vendor.release %>
+</p>
+
+<p>
+  <strong>Delivered orders:</strong>
+  <%= @vendor.delivered_orders %>
+</p>
+
+<p>
+  <strong>Failed orders:</strong>
+  <%= @vendor.failed_orders %>
+</p>
+
+<p>
+  <strong>Deal:</strong>
+  <%= @vendor.deal %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @vendor.discount %>
+</p>
+
+<p>
+  <strong>Sla:</strong>
+  <%= @vendor.sla %>
+</p>
+
+<p>
+  <strong>Penalty:</strong>
+  <%= @vendor.penalty %>
+</p>
+
+<p>
+  <strong>Balance payment:</strong>
+  <%= @vendor.balance_payment %>
+</p>
+
+<p>
+  <strong>Actual payment:</strong>
+  <%= @vendor.actual_payment %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+<%= link_to 'Back', vendors_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  release: MyString
+  delivered_orders: 1
+  failed_orders: 1
+  deal: 1
+  discount: 1
+  sla: 1
+  penalty: 1
+  balance_payment: 1
+  actual_payment: 1
+
+two:
+  name: MyString
+  email: MyString
+  release: MyString
+  delivered_orders: 1
+  failed_orders: 1
+  deal: 1
+  discount: 1
+  sla: 1
+  penalty: 1
+  balance_payment: 1
+  actual_payment: 1
