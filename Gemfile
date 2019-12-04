@@ -9,7 +9,7 @@ gem 'devise'
 gem 'rails', '~> 6.0.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.6'
+  gem 'sqlite3'
 end
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
