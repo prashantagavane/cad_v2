@@ -54,6 +54,6 @@
   <strong>Actual payment:</strong>
   <%= @vendor.actual_payment %>
 </p>
-
-<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+<% if current_user.admin? %>
+<%= link_to 'Edit', edit_vendor_path(@vendor) %> <% end %>
 <%= link_to 'Back', vendors_path %>

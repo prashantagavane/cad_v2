@@ -34,7 +34,7 @@
   <strong>Vendor:</strong>
   <%= @rate.vendor_id %>
 </p>
-
-<%= link_to 'Edit', edit_vendor_rate_path(@vendor, @rate) %> |
+<% if current_user.admin? %>
+<%= link_to 'Edit', edit_vendor_rate_path(@vendor, @rate) %> <% end %>
 <%= link_to 'Back', vendor_rates_path(@vendor) %>
 

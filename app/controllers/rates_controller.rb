@@ -1,5 +1,14 @@
 class RatesController < ApplicationController
   before_action :set_rate, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :ensure_admin, :only => [:edit, :destroy, :new]
+
+
+  def ensure_admin
+    unless current_user && current_user.admin?
+      render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
 
   # GET /rates
   # GET /rates.json
