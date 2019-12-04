@@ -1,6 +1,6 @@
 class Vendor < ApplicationRecord
-  has_many :rates
-  has_many :orders
+  has_many :rates, :dependent => :destroy
+  has_many :orders, :dependent => :destroy
 
   validates :name, :email, :release, :delivered_orders, :failed_orders, :deal, :discount, :sla, :penalty, :balance_payment, :actual_payment, presence: true
   validates :delivered_orders, :failed_orders, :deal, :discount, :sla, :penalty, :balance_payment, :actual_payment, format: { with: /\A[0-9]+\z/, message: "accepts digits only!" }

@@ -18,8 +18,9 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @vendor = Vendor.find(params[:vendor_id])
-    @order = @vendor.orders.build
+    #@vendor = Vendor.find(params[:vendor_id])
+    #@order = @vendor.orders.build
+    @order = Order.new
   end
 
   # GET /orders/1/edit
@@ -30,7 +31,10 @@ class OrdersController < ApplicationController
 
   # POST /orders
   # POST /orders.json
+
+
   def create
+
     @vendor = Vendor.find(params[:vendor_id])
 
     @order = @vendor.orders.build(params.require(:order).permit(:origin, :destination, :plan, :status, :insurance, :vendor_id))
@@ -40,6 +44,7 @@ class OrdersController < ApplicationController
     else
       render :action => "new"
     end
+
   end
 
   # PATCH/PUT /orders/1
